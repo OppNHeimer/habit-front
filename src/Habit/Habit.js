@@ -15,13 +15,12 @@ class Habit extends Component {
   }
 
   render () {
-    let blocks = returnBlocks(this.state.streak, this.props.habit.hue)
+    let blocks = returnBlocks(this.state.streak, this.props.habit.hue, this) // returns blocks and button
 
     return (
       <div>
         <p> {this.props.habit.name} </p>
         {blocks}
-        <input type='submit' onClick={this.incrementStreak} value='didit' />
       </div>
     )
   }
