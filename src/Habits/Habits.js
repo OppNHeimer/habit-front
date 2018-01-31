@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 
 import {API_URL} from '../urls'
-import Habit from '../Habit/Habit'
+import { axiosGet, axiosPost, returnHabits } from './HabitsHelpers'
 
 class Habits extends Component {
   constructor () {
@@ -16,13 +16,7 @@ class Habits extends Component {
   }
 
   componentDidMount () {
-    axios.get(API_URL)
-    .then(res => {
-      this.setState({
-        habits: res.data
-      })
-    })
-    .catch(error => console.log(error))
+    axiosGet(this)
   }
 
   handleNewHabitChange (e) {
@@ -33,30 +27,13 @@ class Habits extends Component {
 
   createHabit (e) {
     e.preventDefault()
-    if (this.state.newHabitName) {
-      let hue = Math.floor(Math.random() * 360)
-      axios.post(API_URL, {
-        name: this.state.newHabitName,
-        hue: hue,
-        streak: 1
-      })
-      .then(res => {
-        let habitsCopy = this.state.habits
-        habitsCopy.push(res.data)
-        this.setState({
-          habits: habitsCopy,
-          newHabitName: ''
-        })
-      })
-    }
+    axiosPost(this.state.newHabitName, this)
   }
 
   render () {
     let habits
     if (this.state.habits) {
-      habits = this.state.habits.map((habit, index) => {
-        return (<Habit key={index} habit={habit} />)
-      })
+      habits = returnHabits(this.state.habits)
     }
 
     return (
