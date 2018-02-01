@@ -4,6 +4,26 @@ import { API_URL } from '../urls'
 import Block from '../Functional/HabitBlock'
 import CheckButton from '../Functional/CheckButton'
 
+export function update (props, state, scope) {
+  let newStreak = state.streak + 1
+  let blocks = returnBlocks(newStreak, props.habit, scope)
+  if (!Array.isArray(blocks)) {
+    state.complete = true
+    props.changeBackgroundColor(blocks)
+  }
+  scope.setState({
+    streak: newStreak,
+    complete: state.complete,
+    blocks: blocks
+  })
+  axios.put(API_URL + props.habit._id,
+    {
+      streak: newStreak,
+      complete: state.complete
+    })
+    .catch(error => console.log(error))
+}
+
 export function returnBlocks (streak, habit, scope) {
   let blocks = []
   let color
@@ -19,17 +39,4 @@ export function returnBlocks (streak, habit, scope) {
   }
   blocks.push(<CheckButton key={1000} onClick={scope.incrementStreak} color={color} />)
   return blocks
-}
-
-export function axiosIncrement (id, scope) {
-  console.log('increment')
-  return (
-    axios.put(API_URL + id)
-    .then(res => {
-      scope.setState({
-        streak: res.data.streak
-      })
-    })
-    .catch(error => console.error(error))
-  )
 }

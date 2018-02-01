@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { returnBlocks, axiosIncrement } from './HabitHelpers'
+import { returnBlocks, update } from './HabitHelpers'
 
 class Habit extends Component {
   constructor (props) {
@@ -13,29 +13,22 @@ class Habit extends Component {
   }
 
   incrementStreak (e) {
-    axiosIncrement(this.props.habit._id, this)
-    .then(() => {
-      let blocks = returnBlocks(this.state.streak, this.props.habit, this)
-      if (!Array.isArray(blocks) && !this.state.complete) {
-        this.setState({
-          complete: true
-        })
-        this.props.changeBackgroundColor(blocks)
-      } else {
-        this.setState({
-          blocks: blocks
-        })
-      }
+    update(this.props, this.state, this)
+  }
+
+  componentWillMount () {
+    this.setState({
+      blocks: returnBlocks(this.state.streak, this.props.habit, this)
     })
   }
 
   render () {
-    let blocks = returnBlocks(this.state.streak, this.props.habit, this)
+    console.log(this.state.complete)
     if (!this.state.complete) {
       return (
         <div>
           <p> {this.props.habit.name} </p>
-          {this.state.blocks || blocks}
+          {this.state.blocks}
         </div>
       )
     } else {
