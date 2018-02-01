@@ -1,7 +1,6 @@
 import React from 'react'
 
 let Block = props => {
-  console.log(props)
   let blockStyle = {
     display: 'inline-block',
     margin: '2px',

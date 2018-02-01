@@ -10,7 +10,7 @@ export function axiosGet (scope) {
         habits: res.data
       })
     })
-    .catch(error => console.log(error))
+    .catch(error => console.error(error))
 }
 
 export function axiosPost (name, scope) {
@@ -32,9 +32,9 @@ export function axiosPost (name, scope) {
   }
 }
 
-export function returnHabits (habits) {
+export function returnHabits (habits, scope) {
   let habitComponents = habits.map((habit, index) => {
-    return (<Habit key={index} habit={habit} />)
+    return (<Habit key={index} habit={habit} changeBackgroundColor={scope.props.changeBackgroundColor} />)
   })
   return habitComponents
 }

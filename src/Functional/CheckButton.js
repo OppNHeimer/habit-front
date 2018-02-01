@@ -2,7 +2,6 @@ import React from 'react'
 import check from '../images/check.png'
 
 let CheckButton = props => {
-  console.log(props)
   let blockStyle = {
     display: 'inline-block',
     margin: '2px',

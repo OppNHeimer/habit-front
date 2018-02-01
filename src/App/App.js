@@ -8,6 +8,13 @@ class App extends Component {
     this.state = {
       backgroundColor: 'hsl(60, 100%, 98%)'
     }
+    this.changeBackgroundColor = this.changeBackgroundColor.bind(this)
+  }
+
+  changeBackgroundColor (color) {
+    this.setState({
+      backgroundColor: color
+    })
   }
 
   render () {
@@ -16,7 +23,7 @@ class App extends Component {
     }
     return (
       <div className='App' style={backgroundColor}>
-        <Habits />
+        <Habits changeBackgroundColor={this.changeBackgroundColor} />
       </div>
     )
   }

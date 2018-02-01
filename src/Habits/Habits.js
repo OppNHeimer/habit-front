@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 
-import {API_URL} from '../urls'
 import { axiosGet, axiosPost, returnHabits } from './HabitsHelpers'
 
 class Habits extends Component {
@@ -33,7 +31,7 @@ class Habits extends Component {
   render () {
     let habits
     if (this.state.habits) {
-      habits = returnHabits(this.state.habits)
+      habits = returnHabits(this.state.habits, this)
     }
 
     return (
