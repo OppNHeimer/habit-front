@@ -7,7 +7,7 @@ class Habit extends Component {
     this.state = {
       streak: this.props.habit.streak,
       blocks: null,
-      complete: false
+      complete: this.props.habit.complete
     }
     this.incrementStreak = this.incrementStreak.bind(this)
   }
