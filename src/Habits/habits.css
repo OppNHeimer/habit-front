@@ -1,0 +1,17 @@
+.habits {
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  margin: auto;
+  align-items: flex-end;
+}
+
+.habits__new-form {
+  margin: 20vw;
+  color: red;
+}
+
+.habits__list {
+  display: flex;
+  flex-direction: column-reverse;
+}

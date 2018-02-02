@@ -19,7 +19,9 @@ export function axiosPost (name, scope) {
     axios.post(API_URL, {
       name: name,
       hue: hue,
-      streak: 1
+      lightness: 98,
+      streak: 0,
+      complete: false
     })
     .then(res => {
       let habitsCopy = scope.state.habits

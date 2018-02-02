@@ -1,17 +1,16 @@
 import React from 'react'
+import './habitBlock.css'
 
 let Block = props => {
   let blockStyle = {
-    display: 'inline-block',
-    margin: '2px',
-    height: '8vw',
-    width: '8vw',
-    backgroundColor: props.color,
-    boxShadow: '0 4px 1px 0 rgba(0, 0, 0, 0.2)'
+    margin: (`${props.size / 24}vw`),
+    height: `${props.size}vw`,
+    width: `${props.size}vw`,
+    backgroundColor: props.color
   }
 
   return (
-    <div style={blockStyle} />
+    <div className='habitBlock' style={blockStyle} />
   )
 }
 

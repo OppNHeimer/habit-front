@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './habit.css'
 import { returnBlocks, update } from './HabitHelpers'
 
 class Habit extends Component {
@@ -14,6 +15,7 @@ class Habit extends Component {
 
   incrementStreak (e) {
     update(this.props, this.state, this)
+    console.log('increment')
   }
 
   componentWillMount () {
@@ -23,12 +25,13 @@ class Habit extends Component {
   }
 
   render () {
-    console.log(this.state.complete)
     if (!this.state.complete) {
       return (
-        <div>
-          <p> {this.props.habit.name} </p>
-          {this.state.blocks}
+        <div className='habit'>
+          <h4 className='habit__h4'> {this.props.habit.name} </h4>
+          <div className='habit__blocks'>
+            {this.state.blocks}
+          </div>
         </div>
       )
     } else {

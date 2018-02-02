@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 
+import './habits.css'
 import { axiosGet, axiosPost, returnHabits } from './HabitsHelpers'
+import NewHabitForm from '../functional/NewHabitForm'
 
 class Habits extends Component {
   constructor () {
@@ -35,21 +37,15 @@ class Habits extends Component {
     }
 
     return (
-      <div>
-        <form>
-          <input
-            type='text'
-            value={this.state.newHabitName}
-            placeholder='new habit'
-            onChange={this.handleNewHabitChange}
-            />
-          <input
-            type='submit'
-            value='create'
-            onClick={this.createHabit}
-            />
-        </form>
-        {habits}
+      <div className='habits'>
+        <NewHabitForm
+          newHabitName={this.state.newHabitName}
+          handleNewHabitChange={this.handleNewHabitChange}
+          createHabit={this.createHabit}
+        />
+        <div className='habits__list'>
+          {habits}
+        </div>
       </div>
     )
   }

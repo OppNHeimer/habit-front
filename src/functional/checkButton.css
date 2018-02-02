@@ -1,0 +1,6 @@
+button {
+  display: inline-block;
+  background-size: cover;
+  background-color: transparent;
+  background-image: url('../images/check.png')
+}
