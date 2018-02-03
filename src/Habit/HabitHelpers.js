@@ -44,9 +44,11 @@ export function returnBlocks (streak, habit, scope) {
 }
 
 function determineSize (streak) {
-  if (streak >= 50) {
-    return 3
-  } else {
+  if (streak <= 50) {
     return 6
+  } else if (streak > 50 && streak <= 72) {
+    return 5
+  } else {
+    return 3
   }
 }
