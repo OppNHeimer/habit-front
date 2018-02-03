@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Route, Link, Redirect, Switch } from 'react-router-dom'
+
 import Habits from '../Habits/Habits'
+import Login from '../Login/Login'
 import './App.css'
 
 class App extends Component {
@@ -23,7 +26,19 @@ class App extends Component {
     }
     return (
       <div className='App' style={backgroundColor}>
-        <Habits changeBackgroundColor={this.changeBackgroundColor} />
+        <Switch>
+          <Route
+            path='/login'
+            component={Login}
+          />
+          <Route
+            path='/'
+            render={() => (
+              <Habits changeBackgroundColor={this.changeBackgroundColor} />
+              )
+            }
+          />
+        </Switch>
       </div>
     )
   }
