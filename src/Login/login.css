@@ -13,26 +13,26 @@
   text-decoration: overline;
 }
 
+.login__form {
+  display: flex;
+  flex-direction: row;
+}
+
 .login__input {
-  padding: 0;
-  border-style: none;
-  background-color: transparent;
   font-size: 2vw;
   height: 6vw;
+  width: 25vw;
   border-bottom: 0.2vw solid grey;
   text-align: center;
-  /* border-right: 0.5vw solid grey; */
-  /* border-left: 0.2vw solid grey; */
+  letter-spacing: 0.5vw;
 }
 
 .login__submit {
-  /* position: relative;
-  bottom: 0; */
-  height: 6vw;
-  width: 6vw;
+  height: 5.9vw;
+  width: 5.9vw;
   background-color: transparent;
   border: 0.2vw outset grey;
   background-size: cover;
   background-image: url('../images/check.png');
-  margin: 0;
+  margin: 0.3vw;
 }

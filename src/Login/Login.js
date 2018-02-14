@@ -25,16 +25,17 @@ class Login extends Component {
     return (
       <div className='login'>
         <h1 className='login__h1'>
-          Who are you?
+          Which one are you?
         </h1>
-        <form>
+        <form className='login__form'>
           <input className='login__input'
             type='text'
             value={this.state.username}
             placeholder='username'
             onChange={this.handleFieldChange}
           />
-          <button className='login__submit'
+          <input type='submit' className='login__submit'
+            value=''
             onClick={this.fieldSubmit}
           />
         </form>
