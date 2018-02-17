@@ -8,7 +8,6 @@ let CheckButton = props => {
     width: `${props.size - props.size / 60}vw`,
     border: `0.1vw outset ${props.color}`
   }
-  console.log(props.size)
   return (
     <button style={blockStyle} onClick={props.onClick} />
   )

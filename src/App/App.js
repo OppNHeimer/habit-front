@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Link, Redirect, Switch } from 'react-router-dom'
 
 import Habits from '../Habits/Habits'
-import Login from '../Login/Login'
+import Welcome from '../Welcome/Welcome'
 import './App.css'
 
 class App extends Component {
@@ -28,8 +28,20 @@ class App extends Component {
       <div className='App' style={backgroundColor}>
         <Switch>
           <Route
-            path='/login'
-            component={Login}
+            path='/welcome/login'
+            render={() => (
+              <Welcome mod='login' />
+            )}
+          />
+          <Route
+            path='/welcome/signup'
+            render={() => (
+              <Welcome mod='signup' />
+            )}
+          />
+          <Route
+            path='/welcome'
+            component={Welcome}
           />
           <Route
             path='/'

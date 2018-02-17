@@ -25,6 +25,7 @@
   border-bottom: 0.2vw solid grey;
   text-align: center;
   letter-spacing: 0.5vw;
+  margin: 0 0.5vw 0 0.5vw;
 }
 
 .login__submit {

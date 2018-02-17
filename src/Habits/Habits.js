@@ -31,11 +31,6 @@ class Habits extends Component {
   }
 
   render () {
-    let habits
-    if (this.state.habits) {
-      habits = returnHabits(this.state.habits, this)
-    }
-
     return (
       <div className='habits'>
         <NewHabitForm
@@ -44,7 +39,7 @@ class Habits extends Component {
           createHabit={this.createHabit}
         />
         <div className='habits__list'>
-          {habits}
+          {this.state.habits && returnHabits(this.state.habits, this)}
         </div>
       </div>
     )

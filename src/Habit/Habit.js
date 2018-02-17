@@ -15,7 +15,6 @@ class Habit extends Component {
 
   incrementStreak (e) {
     update(this.props, this.state, this)
-    console.log('increment')
   }
 
   componentWillMount () {
