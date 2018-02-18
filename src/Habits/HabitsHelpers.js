@@ -1,10 +1,11 @@
 import React from 'react'
 import axios from 'axios'
-import { API_URL } from '../urls'
+import { API_URL, AUTH_HEADER } from '../urls'
 import Habit from '../Habit/Habit'
 
 export function axiosGet (scope) {
-  axios.get(API_URL)
+  console.log(AUTH_HEADER)
+  axios.get(API_URL, AUTH_HEADER)
     .then(res => {
       scope.setState({
         habits: res.data
@@ -22,7 +23,8 @@ export function axiosPost (name, scope) {
       lightness: 98,
       streak: 0,
       complete: false
-    })
+    },
+    AUTH_HEADER)
     .then(res => {
       let habitsCopy = scope.state.habits
       habitsCopy.push(res.data)

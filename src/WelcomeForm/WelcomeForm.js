@@ -33,6 +33,7 @@ class WelcomeForm extends Component {
     })
       .then(res => {
         if (res.data.token) {
+          console.log(res.data.user._id)
           localStorage.setItem('jwt', res.data.token)
           localStorage.setItem('userID', res.data.user._id) // not sure if needed
         } else if (res.data.message) {

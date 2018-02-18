@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { API_URL } from '../urls'
+import { API_URL, AUTH_HEADER } from '../urls'
 import Block from '../functional/HabitBlock'
 import CheckButton from '../functional/CheckButton'
 
@@ -21,7 +21,8 @@ export function update (props, state, scope) {
     {
       streak: newStreak,
       complete: state.complete
-    })
+    },
+    AUTH_HEADER)
     .catch(error => console.log(error))
 }
 
