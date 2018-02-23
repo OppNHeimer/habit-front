@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 import './habits.css'
 import { axiosGet, axiosPost, returnHabits } from './HabitsHelpers'
@@ -33,6 +34,8 @@ class Habits extends Component {
   render () {
     return (
       <div className='habits'>
+        <Link to='/welcome' onClick={() => localStorage.removeItem('jwt')}>logout</Link>
+
         <NewHabitForm
           newHabitName={this.state.newHabitName}
           handleNewHabitChange={this.handleNewHabitChange}

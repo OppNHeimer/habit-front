@@ -23,7 +23,7 @@ class Welcome extends Component {
         <h1 className='login__h1'>
           {this.welcomeStatement(this.props)}
         </h1>
-        {this.props.mod && <WelcomeForm mod={this.props.mod} />}
+        {this.props.mod && <WelcomeForm mod={this.props.mod} history={this.props.history} />}
       </div>
     )
   }

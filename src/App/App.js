@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Link, Redirect, Switch } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
 
 import Habits from '../Habits/Habits'
 import Welcome from '../Welcome/Welcome'
@@ -26,29 +26,40 @@ class App extends Component {
     }
     return (
       <div className='App' style={backgroundColor}>
+        <h1>HABIT100</h1>
+
         <Switch>
           <Route
             path='/welcome/login'
-            render={() => (
-              <Welcome mod='login' />
+            render={(props) => (
+              localStorage.getItem('jwt')
+                ? <Redirect to='/' />
+                : <Welcome {...props} mod='login' />
             )}
           />
           <Route
             path='/welcome/signup'
-            render={() => (
-              <Welcome mod='signup' />
+            render={(props) => (
+              localStorage.getItem('jwt')
+                ? <Redirect to='/' />
+                : <Welcome {...props} mod='signup' />
             )}
           />
           <Route
             path='/welcome'
-            component={Welcome}
+            render={() => (
+              localStorage.getItem('jwt')
+              ? <Redirect to='/' />
+              : <Welcome />
+            )}
           />
           <Route
             path='/'
             render={() => (
-              <Habits changeBackgroundColor={this.changeBackgroundColor} />
-              )
-            }
+              localStorage.getItem('jwt')
+              ? <Habits changeBackgroundColor={this.changeBackgroundColor} />
+              : <Redirect to='/welcome' />
+            )}
           />
         </Switch>
       </div>

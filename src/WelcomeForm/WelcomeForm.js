@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import './welcomeForm.css'
 import axios from 'axios'
 import { API_URL } from '../urls'
+// import { History } from 'react-router'
 
 class WelcomeForm extends Component {
   constructor () {
@@ -16,7 +17,6 @@ class WelcomeForm extends Component {
   }
 
   handleFieldChange (e) {
-    console.log(e.target.value)
     let name = e.target.name
 
     this.setState({
@@ -33,9 +33,8 @@ class WelcomeForm extends Component {
     })
       .then(res => {
         if (res.data.token) {
-          console.log(res.data.user._id)
           localStorage.setItem('jwt', res.data.token)
-          localStorage.setItem('userID', res.data.user._id) // not sure if needed
+          this.props.history.push('/')
         } else if (res.data.message) {
           this.setState({ message: res.data.message })
         } else { console.log('something went wrong receiving jwt or message') }

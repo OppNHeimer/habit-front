@@ -1,11 +1,12 @@
 import React from 'react'
 import axios from 'axios'
-import { API_URL, AUTH_HEADER } from '../urls'
+import { API_URL } from '../urls'
+import { returnAuthHeader } from '../App/AppHelpers'
+
 import Habit from '../Habit/Habit'
 
 export function axiosGet (scope) {
-  console.log(AUTH_HEADER)
-  axios.get(API_URL, AUTH_HEADER)
+  axios.get(API_URL, returnAuthHeader())
     .then(res => {
       scope.setState({
         habits: res.data
@@ -24,7 +25,7 @@ export function axiosPost (name, scope) {
       streak: 0,
       complete: false
     },
-    AUTH_HEADER)
+    returnAuthHeader())
     .then(res => {
       let habitsCopy = scope.state.habits
       habitsCopy.push(res.data)
@@ -33,12 +34,13 @@ export function axiosPost (name, scope) {
         newHabitName: ''
       })
     })
+    .catch((err) => console.error(err))
   }
 }
-
+// change background broken
 export function returnHabits (habits, scope) {
   let habitComponents = habits.map((habit, index) => {
-    return (<Habit key={index} habit={habit} changeBackgroundColor={scope.props.changeBackgroundColor} />)
+    return (<Habit key={index} index={habits.length - index} habit={habit} changeBackgroundColor={scope.props.changeBackgroundColor} />)
   })
   return habitComponents
 }
