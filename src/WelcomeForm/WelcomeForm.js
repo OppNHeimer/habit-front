@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 // import './welcomeForm.css'
 import axios from 'axios'
 import { API_URL } from '../urls'
-// import { History } from 'react-router'
 
 class WelcomeForm extends Component {
   constructor () {
