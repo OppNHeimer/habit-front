@@ -1,6 +1,6 @@
 # habit100 
 
-habit100 is a React application that consumes a RESTful express/mongoose (API)[https://github.com/OppNHeimer/habit-back].
+habit100 is a React application that consumes a RESTful express/mongoose [API](https://github.com/OppNHeimer/habit-back).
 
 habit100 is a tool to help users cement positive habits through a simple UI. User's login to create a new 'habit', or task to be completed daily, and simply check-in each day they complete the habit. Colorful blocks act as tallies so users can easily see how many times they've completed the habit.
 
