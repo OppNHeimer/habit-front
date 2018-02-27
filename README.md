@@ -1,4 +1,4 @@
-#habit100 
+# habit100 
 
 habit100 is a React application that consumes a RESTful express/mongoose (API)[https://github.com/OppNHeimer/habit-back].
 
