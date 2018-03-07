@@ -27,10 +27,9 @@ export function axiosPost (name, scope) {
     },
     returnAuthHeader())
     .then(res => {
-      let habitsCopy = scope.state.habits
-      habitsCopy.push(res.data)
+      scope.setState({habits: null})
       scope.setState({
-        habits: habitsCopy,
+        habits: res.data,
         newHabitName: ''
       })
     })
