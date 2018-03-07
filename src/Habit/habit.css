@@ -2,6 +2,7 @@
   /* display:flex;
   flex-basis: column; */
   /* width: 67vw; */
+  margin: 1vw;
 }
 .habit__h4 {
   text-align: right;

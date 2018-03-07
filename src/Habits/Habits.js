@@ -35,12 +35,15 @@ class Habits extends Component {
     return (
       <div className='habits'>
         <Link to='/welcome' onClick={() => localStorage.removeItem('jwt')}>logout</Link>
-
-        <NewHabitForm
-          newHabitName={this.state.newHabitName}
-          handleNewHabitChange={this.handleNewHabitChange}
-          createHabit={this.createHabit}
-        />
+        <div className='habits__new-form'>
+          <NewHabitForm
+            // className='habits__new-form'
+            newHabitName={this.state.newHabitName}
+            handleNewHabitChange={this.handleNewHabitChange}
+            createHabit={this.createHabit}
+          />
+        </div>
+        
         <div className='habits__list'>
           {this.state.habits && returnHabits(this.state.habits, this)}
         </div>

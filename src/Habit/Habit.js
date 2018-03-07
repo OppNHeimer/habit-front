@@ -36,10 +36,13 @@ class Habit extends Component {
   }
 
   render () {
+    let width
+    this.state.index > 1 ? width = {width: '33vw'} : width = {width: '70vw'}
+    console.log(width)
     if (!this.state.habit.complete) {
       return (
-        <div className='habit'>
-          <h4 className='habit__h4'> {this.props.habit.name} </h4>
+        <div className='habit' style={width}>
+          <h4 className='habit__h4'> {this.state.habit.name} </h4>
           <div className='habit__blocks'>
             {returnBlocks(this.state, this.state.habit, this)}
           </div>

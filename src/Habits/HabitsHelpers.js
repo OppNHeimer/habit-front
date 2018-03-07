@@ -38,8 +38,8 @@ export function axiosPost (name, scope) {
 }
 // change background broken
 export function returnHabits (habits, scope) {
-  let habitComponents = habits.map((habit, index) => {
-    return (<Habit key={index} index={habits.length - index} habit={habit} changeBackgroundColor={scope.props.changeBackgroundColor} />)
+  let habitComponents = habits.reverse().map((habit, index) => {
+    return (<Habit key={index} index={index} habit={habit} changeBackgroundColor={scope.props.changeBackgroundColor} />)
   })
   return habitComponents
 }

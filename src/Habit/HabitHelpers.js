@@ -15,10 +15,10 @@ export function returnBlocks (state, habit, scope) {
 }
 
 function determineSize (index) {
-  if (index === 1) {
-    return 6
-  } else if (index === 2) {
-    return 5
+  if (index === 0) {
+    return 6.3
+  } else if (index === 1) {
+    return 5.2
   } else {
     return 3
   }

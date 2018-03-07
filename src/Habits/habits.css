@@ -1,17 +1,18 @@
 .habits {
   display: flex;
   flex-direction: column;
-  width: 65vw;
+  width: 70vw;
   margin: auto;
   align-items: flex-end;
 }
 
 .habits__new-form {
-  margin: 20vw;
-  color: red;
+  margin: 1vw;
 }
 
 .habits__list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  /* justify-content: center; */
+  flex-wrap: wrap;
 }
