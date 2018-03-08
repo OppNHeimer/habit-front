@@ -1,17 +1,29 @@
 .habits {
   display: flex;
   flex-direction: column;
-  width: 70vw;
   margin: auto;
   align-items: flex-end;
 }
 
+.habits__logout {
+  text-align: right;
+  margin: 2vw;
+}
+
+.habits__logout a {
+  font-size: 1.2vw;
+}
+
 .habits__new-form {
   margin: 1vw 1vw 2vw 1vw;
+  width: 68vw;
+  margin: auto;
 }
 
 .habits__list {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
+  width: 70vw;
+  margin: auto;
 }

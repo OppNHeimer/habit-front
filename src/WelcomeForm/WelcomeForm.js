@@ -46,18 +46,21 @@ class WelcomeForm extends Component {
         <form className='login__form'
           onChange={this.handleFieldChange}
         >
-          <input className='login__input'
-            type='text'
-            name='username'
-            value={this.state.username}
-            placeholder='username'
-          />
-          <input className='login__input'
-            type='text'
-            name='password'
-            value={this.state.password}
-            placeholder='password'
-          />
+          <div className='login__inputs'>
+            <input className='login__input'
+              type='text'
+              name='username'
+              autoFocus
+              value={this.state.username}
+              placeholder='username'
+            />
+            <input className='login__input'
+              type='text'
+              name='password'
+              value={this.state.password.replace(/./g, '★')}
+              placeholder='password'
+            />
+          </div>
           <input type='submit' className='login__submit'
             value=''
             onClick={this.handleSubmit}

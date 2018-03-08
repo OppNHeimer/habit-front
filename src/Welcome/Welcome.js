@@ -6,13 +6,13 @@ import WelcomeForm from '../WelcomeForm/WelcomeForm'
 
 class Welcome extends Component {
   welcomeStatement (props) {
-    if (props.mod === 'signup') { return 'Nice to meet you' }
-    if (props.mod === 'login') { return 'Welcome back!' }
+    if (props.mod === 'signup') { return 'nice to meet you' }
+    if (props.mod === 'login') { return 'welcome back' }
     return (
       <div>
-        <Link to='/welcome/login'>LogIn</Link>
-        <span>|</span>
-        <Link to='/welcome/signup'>SignUp</Link>
+        <Link to='/welcome/login' className='login__link'>login</Link>
+        <span> || </span>
+        <Link to='/welcome/signup' className='login__link'>signup</Link>
       </div>
     )
   }
@@ -20,6 +20,7 @@ class Welcome extends Component {
   render () {
     return (
       <div className='login'>
+        {/* {this.props.mod && <Link to='/welcome'>back</Link>} */}
         <h1 className='login__h1'>
           {this.welcomeStatement(this.props)}
         </h1>

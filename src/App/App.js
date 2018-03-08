@@ -26,8 +26,6 @@ class App extends Component {
     }
     return (
       <div className='App' style={backgroundColor}>
-        <h1>HABIT100</h1>
-
         <Switch>
           <Route
             path='/welcome/login'

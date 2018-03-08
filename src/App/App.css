@@ -1,5 +1,6 @@
 .App {
   min-height: 100vh;
+  color: rgba(0, 50, 50, .5)
 }
 
 input {
@@ -10,6 +11,15 @@ input {
 
 input:focus {
   outline: none;
+}
+
+a {
+  color: rgba(0, 75, 75, .75);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 50, 50, .5);
 }
 
 

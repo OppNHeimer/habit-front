@@ -40,6 +40,7 @@ class NewHabitForm extends Component {
           <input className='form__input'
             type='text'
             value={this.props.newHabitName}
+            autoFocus
             placeholder='new habit'
             onChange={this.props.handleNewHabitChange}
           />

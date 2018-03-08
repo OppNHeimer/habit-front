@@ -9,8 +9,6 @@
 
 .login__h1 {
   font-size: 6vw;
-  color: grey;
-  text-decoration: overline;
 }
 
 .login__form {
@@ -18,22 +16,58 @@
   flex-direction: row;
 }
 
+.login__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
 .login__input {
-  font-size: 2vw;
-  height: 6vw;
+  font-size: 1vw;
+  height: 4vw;
   width: 25vw;
-  border-bottom: 0.2vw solid grey;
+  border-bottom: 1px solid rgba(0, 50, 50, 0.5);
   text-align: center;
-  letter-spacing: 0.5vw;
+  letter-spacing: 0.25vw;
   margin: 0 0.5vw 0 0.5vw;
 }
 
 .login__submit {
-  height: 5.9vw;
-  width: 5.9vw;
-  background-color: transparent;
-  border: 0.2vw outset grey;
+  height: 4vw;
+  width: 4vw;
+  background-color: rgba(255, 255, 255, 0.25);
   background-size: cover;
   background-image: url('../images/check.png');
   margin: 0.3vw;
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2); 
+  animation: cycleColor 1s alternate infinite linear;
+}
+
+.login__submit:hover {
+  position: relative;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.2);
+  top: -1px;
+}
+
+@keyframes cycleColor {
+  0% { border: 1px solid hsl(0, 100%, 75%); }
+  5% { border: 1px solid hsl(18, 100%, 75%); }
+  10% { border: 1px solid hsl(36, 100%, 75%); }
+  15% { border: 1px solid hsl(54, 100%, 75%); }
+  20% { border: 1px solid hsl(72, 100%, 75%); }
+  25% { border: 1px solid hsl(90, 100%, 75%); }
+  30% { border: 1px solid hsl(108, 100%, 75%); }
+  35% { border: 1px solid hsl(126, 100%, 75%); }
+  40% { border: 1px solid hsl(144, 100%, 75%); }
+  45% { border: 1px solid hsl(162, 100%, 75%); }
+  50% { border: 1px solid hsl(180, 100%, 75%); }
+  55% { border: 1px solid hsl(198, 100%, 75%); }
+  60% { border: 1px solid hsl(216, 100%, 75%); }
+  65% { border: 1px solid hsl(234, 100%, 75%); }
+  70% { border: 1px solid hsl(252, 100%, 75%); }
+  75% { border: 1px solid hsl(270, 100%, 75%); }
+  80% { border: 1px solid hsl(288, 100%, 75%); }
+  85% { border: 1px solid hsl(306, 100%, 75%); }
+  90% { border: 1px solid hsl(324, 100%, 75%); }
+  95% { border: 1px solid hsl(342, 100%, 75%); }
+  100% { border: 1px solid hsl(360, 100%, 75%); }
 }

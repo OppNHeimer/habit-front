@@ -1,14 +1,9 @@
 .habit {
-  /* display:flex;
-  flex-basis: column; */
-  /* width: 67vw; */
   margin: 1vw;
 }
 .habit__h4 {
   text-align: right;
-  color: grey;
   font-size: 1.5vw;
-  text-decoration: overline;
   letter-spacing: 2px;
   margin: 1vw 1vw 0.5vw 0;
 }
