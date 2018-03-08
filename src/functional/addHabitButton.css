@@ -1,0 +1,40 @@
+.addHabitButton {
+    margin: 0.3135vw;
+    height: 6.1655vw;
+    width: 6.1655vw;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.25);
+    /* background-image: url('../images/check.png'); */
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2); 
+    animation: cycleColor 1s alternate infinite linear;
+}
+
+button:hover {
+    position: relative;
+    box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.2);
+    top: -1px;
+  }
+
+@keyframes cycleColor {
+    0% { border: 1px solid hsl(0, 100%, 75%); }
+    5% { border: 1px solid hsl(18, 100%, 75%); }
+    10% { border: 1px solid hsl(36, 100%, 75%); }
+    15% { border: 1px solid hsl(54, 100%, 75%); }
+    20% { border: 1px solid hsl(72, 100%, 75%); }
+    25% { border: 1px solid hsl(90, 100%, 75%); }
+    30% { border: 1px solid hsl(108, 100%, 75%); }
+    35% { border: 1px solid hsl(126, 100%, 75%); }
+    40% { border: 1px solid hsl(144, 100%, 75%); }
+    45% { border: 1px solid hsl(162, 100%, 75%); }
+    50% { border: 1px solid hsl(180, 100%, 75%); }
+    55% { border: 1px solid hsl(198, 100%, 75%); }
+    60% { border: 1px solid hsl(216, 100%, 75%); }
+    65% { border: 1px solid hsl(234, 100%, 75%); }
+    70% { border: 1px solid hsl(252, 100%, 75%); }
+    75% { border: 1px solid hsl(270, 100%, 75%); }
+    80% { border: 1px solid hsl(288, 100%, 75%); }
+    85% { border: 1px solid hsl(306, 100%, 75%); }
+    90% { border: 1px solid hsl(324, 100%, 75%); }
+    95% { border: 1px solid hsl(342, 100%, 75%); }
+    100% { border: 1px solid hsl(360, 100%, 75%); }
+}

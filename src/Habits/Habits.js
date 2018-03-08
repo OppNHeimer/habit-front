@@ -1,9 +1,10 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import './habits.css'
 import { axiosGet, axiosPost, returnHabits } from './HabitsHelpers'
-import NewHabitForm from '../functional/NewHabitForm'
+// import AddHabitButton from '../functional/AddHabitButton'
+import NewHabitForm from '../NewHabitForm/NewHabitForm'
 
 class Habits extends Component {
   constructor () {
@@ -37,7 +38,6 @@ class Habits extends Component {
         <Link to='/welcome' onClick={() => localStorage.removeItem('jwt')}>logout</Link>
         <div className='habits__new-form'>
           <NewHabitForm
-            // className='habits__new-form'
             newHabitName={this.state.newHabitName}
             handleNewHabitChange={this.handleNewHabitChange}
             createHabit={this.createHabit}

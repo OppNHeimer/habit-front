@@ -1,6 +1,13 @@
-button {
-  display: inline-block;
+.checkButton {
   background-size: cover;
-  background-color: transparent;
-  background-image: url('../images/check.png')
+  background-color: rgba(255, 255, 255, 0.25);
+  background-image: url('../images/check.png');
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2);
 }
+
+.checkButton:hover {
+  position: relative;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.2);
+  top: -1px;
+}
+
