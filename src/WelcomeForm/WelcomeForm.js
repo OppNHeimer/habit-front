@@ -41,6 +41,7 @@ class WelcomeForm extends Component {
   }
 
   render () {
+    console.log(this.state.password)
     return (
       <div>
         <form className='login__form'
@@ -55,9 +56,9 @@ class WelcomeForm extends Component {
               placeholder='username'
             />
             <input className='login__input'
-              type='text'
+              type='password'
               name='password'
-              value={this.state.password.replace(/./g, '★')}
+              value={this.state.password}
               placeholder='password'
             />
           </div>
