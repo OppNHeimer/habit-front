@@ -28,7 +28,7 @@ class App extends Component {
       <div className='App' style={backgroundColor}>
         <Switch>
           <Route
-            path='/welcome/login'
+            path='/habit100/welcome/login'
             render={(props) => (
               localStorage.getItem('jwt')
                 ? <Redirect to='/' />
@@ -36,7 +36,7 @@ class App extends Component {
             )}
           />
           <Route
-            path='/welcome/signup'
+            path='/habit100/welcome/signup'
             render={(props) => (
               localStorage.getItem('jwt')
                 ? <Redirect to='/' />
@@ -44,7 +44,7 @@ class App extends Component {
             )}
           />
           <Route
-            path='/welcome'
+            path='/habit100/welcome'
             render={() => (
               localStorage.getItem('jwt')
               ? <Redirect to='/' />
@@ -52,7 +52,7 @@ class App extends Component {
             )}
           />
           <Route
-            path='/'
+            path='/habit100/'
             render={() => (
               localStorage.getItem('jwt')
               ? <Habits changeBackgroundColor={this.changeBackgroundColor} />
