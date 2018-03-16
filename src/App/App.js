@@ -28,35 +28,35 @@ class App extends Component {
       <div className='App' style={backgroundColor}>
         <Switch>
           <Route
-            path='/habit100/welcome/login/'
+            path='/habit100/welcome/login'
             render={(props) => (
               localStorage.getItem('jwt')
-                ? <Redirect to='/habit100/' />
+                ? <Redirect to='/habit100' />
                 : <Welcome {...props} mod='login' />
             )}
           />
           <Route
-            path='/habit100/welcome/signup/'
+            path='/habit100/welcome/signup'
             render={(props) => (
               localStorage.getItem('jwt')
-                ? <Redirect to='/habit100/' />
+                ? <Redirect to='/habit100' />
                 : <Welcome {...props} mod='signup' />
             )}
           />
           <Route
-            path='/habit100/welcome/'
+            path='/habit100/welcome'
             render={() => (
               localStorage.getItem('jwt')
-                ? <Redirect to='/habit100/' />
+                ? <Redirect to='/habit100' />
                 : <Welcome />
             )}
           />
           <Route
-            path='/habit100/'
+            path='/habit100'
             render={() => (
               localStorage.getItem('jwt')
               ? <Habits changeBackgroundColor={this.changeBackgroundColor} />
-              : <Redirect to='/habit100/welcome/' />
+              : <Redirect to='/habit100/welcome' />
             )}
           />
         </Switch>

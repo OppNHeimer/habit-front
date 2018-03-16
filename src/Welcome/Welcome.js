@@ -10,9 +10,9 @@ class Welcome extends Component {
     if (props.mod === 'login') { return 'welcome back' }
     return (
       <div>
-        <Link to='/welcome/login' className='login__link'>login</Link>
+        <Link to='/habtit100/welcome/login' className='login__link'>login</Link>
         <span> || </span>
-        <Link to='/welcome/signup' className='login__link'>signup</Link>
+        <Link to='/habit100/welcome/signup' className='login__link'>signup</Link>
       </div>
     )
   }

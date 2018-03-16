@@ -37,7 +37,7 @@ class Habits extends Component {
         <div className='habits'>
           <div className='habits__logout'>
             <Link 
-              to='/welcome' 
+              to='/habit100/welcome' 
               onClick={() => localStorage.removeItem('jwt')}>
               logout  
             </Link>
