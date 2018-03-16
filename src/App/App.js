@@ -31,7 +31,7 @@ class App extends Component {
             path='/habit100/welcome/login'
             render={(props) => (
               localStorage.getItem('jwt')
-                ? <Redirect to='/' />
+                ? <Redirect to='/habit100/' />
                 : <Welcome {...props} mod='login' />
             )}
           />
@@ -39,7 +39,7 @@ class App extends Component {
             path='/habit100/welcome/signup'
             render={(props) => (
               localStorage.getItem('jwt')
-                ? <Redirect to='/' />
+                ? <Redirect to='/habit100/' />
                 : <Welcome {...props} mod='signup' />
             )}
           />
@@ -56,7 +56,7 @@ class App extends Component {
             render={() => (
               localStorage.getItem('jwt')
               ? <Habits changeBackgroundColor={this.changeBackgroundColor} />
-              : <Redirect to='/welcome' />
+              : <Redirect to='/habit100/welcome' />
             )}
           />
         </Switch>
