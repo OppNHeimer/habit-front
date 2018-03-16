@@ -31,6 +31,7 @@ class WelcomeForm extends Component {
       password: this.state.password
     })
       .then(res => {
+        console.log(res)
         if (res.data.token) {
           localStorage.setItem('jwt', res.data.token)
           this.props.history.push('/')
