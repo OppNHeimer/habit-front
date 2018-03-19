@@ -42,7 +42,8 @@ class WelcomeForm extends Component {
   }
 
   render () {
-    console.log(this.state.password)
+    // console.log(this.state.password)
+    console.log('form loaded')
     return (
       <div>
         <form className='login__form'
