@@ -31,7 +31,6 @@ class WelcomeForm extends Component {
       password: this.state.password
     })
       .then(res => {
-        console.log(res)
         if (res.data.token) {
           localStorage.setItem('jwt', res.data.token)
           this.props.history.push('/habit100')
@@ -42,8 +41,6 @@ class WelcomeForm extends Component {
   }
 
   render () {
-    // console.log(this.state.password)
-    console.log('form loaded')
     return (
       <div>
         <form className='login__form'
