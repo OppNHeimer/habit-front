@@ -34,7 +34,7 @@ class WelcomeForm extends Component {
         console.log(res)
         if (res.data.token) {
           localStorage.setItem('jwt', res.data.token)
-          this.props.history.push('/')
+          this.props.history.push('/habit100')
         } else if (res.data.message) {
           this.setState({ message: res.data.message })
         } else { console.log('something went wrong receiving jwt or message') }
