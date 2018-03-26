@@ -26,7 +26,6 @@ $ npm start
 
 - limit users to check each habit only once per day
 - limit number of days skipped before habit is lost and user must start over
-- login screen styling
-- resize habit blocks depending on number of user habits
+- styling for mobile
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
