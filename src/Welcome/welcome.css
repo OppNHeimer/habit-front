@@ -8,7 +8,8 @@
 }
 
 .login__h1 {
-  font-size: 6vw;
+  font-size: 3rem;
+  text-align:center;
 }
 
 .login__form {
@@ -22,9 +23,9 @@
 }
 
 .login__input {
-  font-size: 1vw;
-  height: 4vw;
-  width: 25vw;
+  font-size: .9rem;
+  padding: 1.2rem 1rem;
+  width: 60vw;
   border-bottom: 1px solid rgba(0, 50, 50, 0.5);
   text-align: center;
   letter-spacing: 0.25vw;
@@ -32,8 +33,8 @@
 }
 
 .login__submit {
-  height: 4vw;
-  width: 4vw;
+  height: 4rem;
+  width: 4rem;
   background-color: rgba(255, 255, 255, 0.25);
   background-size: cover;
   background-image: url('../images/check.png');
@@ -70,4 +71,22 @@
   90% { border: 1px solid hsl(324, 100%, 75%); }
   95% { border: 1px solid hsl(342, 100%, 75%); }
   100% { border: 1px solid hsl(360, 100%, 75%); }
+}
+
+@media (min-width: 480px) {
+  .login__input {
+    width: 40vw;
+  }
+}
+@media (min-width: 768px) {
+  .login__input {
+    width: 25vw;
+  }
+  .login__submit {
+    height: 4vw;
+    width: 4vw;
+  }
+  .login__h1 {
+    font-size: 6vw;
+  }
 }
