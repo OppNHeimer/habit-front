@@ -4,7 +4,9 @@ habit100 is a React application that consumes a RESTful express/mongoose [API](h
 
 habit100 is a tool to help users cement positive habits through a simple UI. User's login to create a new 'habit', or task to be completed daily, and simply check-in each day they complete the habit. Colorful blocks act as tallies so users can easily see how many times they've completed the habit.
 
-habit100 is not deployed yet but can be run locally with node.js and the following commands: 
+Check out the deployed MVP at https://oppnheimer.github.io/habit100/ (it may take a second to load, the API is hosted for free with Heroku)
+
+or run locally:
 
 download and start a local express/mongoose server
 ```bash
