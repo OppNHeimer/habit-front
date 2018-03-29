@@ -23,18 +23,23 @@
 }
 
 .login__input {
+  box-sizing: border-box;
   font-size: .9rem;
-  padding: 1.2rem 1rem;
+  padding: 0.5rem;
+  height: 10vh;
   width: 60vw;
-  border-bottom: 1px solid rgba(0, 50, 50, 0.5);
+  border-bottom: 0.1rem solid rgba(0, 50, 50, 0.5);
   text-align: center;
-  letter-spacing: 0.25vw;
+  letter-spacing: 0.25rem;
   margin: 0 0.5vw 0 0.5vw;
 }
 
 .login__submit {
-  height: 4rem;
-  width: 4rem;
+  box-sizing: border-box;
+  position: relative;
+  height: 10vh;
+  width: 10vh;
+  top: -3px;
   background-color: rgba(255, 255, 255, 0.25);
   background-size: cover;
   background-image: url('../images/check.png');
@@ -44,9 +49,9 @@
 }
 
 .login__submit:hover {
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.2);
-  top: -1px;
+  top: -4px;
 }
 
 @keyframes cycleColor {
@@ -82,11 +87,11 @@
   .login__input {
     width: 25vw;
   }
-  .login__submit {
+  /* .login__submit {
     height: 4vw;
     width: 4vw;
   }
   .login__h1 {
     font-size: 6vw;
-  }
+  } */
 }

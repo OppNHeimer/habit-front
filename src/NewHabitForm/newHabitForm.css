@@ -1,16 +1,18 @@
-.form {
-  height: 10vw;
+.new-habit-form {
+  width: 68vw;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
 .form__input {
   text-align: right;
   color: rgba(0, 50, 50, 0.5);
-  font-size: 1.5vw;
-  letter-spacing: 2px;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
   margin: 1vw 1vw 0.5vw 0;
   font-weight: bold;
+  font-family: inherit;
 }

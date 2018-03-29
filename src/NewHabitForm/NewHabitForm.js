@@ -34,7 +34,7 @@ class NewHabitForm extends Component {
     }
 
     return (
-      <form className='form'>
+      <form className='new-habit-form'>
         {
           this.state.input && 
           <input className='form__input'

@@ -42,13 +42,13 @@ class Habits extends Component {
               logout  
             </Link>
           </div> 
-          <div className='habits__new-form'>
+          {/* <div className='habits__new-form'> */}
             <NewHabitForm
               newHabitName={this.state.newHabitName}
               handleNewHabitChange={this.handleNewHabitChange}
               createHabit={this.createHabit}
             />
-          </div>
+          {/* </div> */}
           <div className='habits__list'>
             {this.state.habits && returnHabits(this.state.habits, this)}
           </div>
