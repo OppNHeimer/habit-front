@@ -19,7 +19,7 @@ class Habit extends Component {
     let complete = this.state.habit.complete
     let newStreak = this.state.habit.streak + 1
     if (newStreak >= 100) {
-      this.props.updateBackgroundColor(`hsl(${this.state.habit.hue}, 100%, 99%)`)
+      this.props.updateBackgroundColor(`hsl(${this.state.habit.hue}, 100%, 98%)`)
       complete = true 
     }
     axios.put(
