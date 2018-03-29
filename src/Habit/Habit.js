@@ -18,7 +18,10 @@ class Habit extends Component {
   incrementStreak (e) {
     let complete = this.state.habit.complete
     let newStreak = this.state.habit.streak + 1
-    if (newStreak >= 100) { complete = true }
+    if (newStreak >= 10) { //remember to change back to 100
+      this.props.updateBackgroundColor(`hsl(${this.state.habit.hue}, 100%, 99%)`)
+      complete = true 
+    }
     axios.put(
       API_URL + this.state.habit._id,
       {
