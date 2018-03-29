@@ -59,6 +59,10 @@ class App extends Component {
               : <Redirect to='/habit100/welcome' />
             )}
           />
+          <Route
+            path='/*'
+            render={() => <Redirect to='/habit100' />}
+          />
         </Switch>
       </div>
     )
