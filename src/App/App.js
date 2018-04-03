@@ -39,6 +39,7 @@ class App extends Component {
       API_URL + 'getBackgroundColor', returnAuthHeader()
     )
     .then(res => {
+      console.log(res.data)
       this.setState({
         backgroundColor: res.data.backgroundColor
       })
