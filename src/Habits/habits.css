@@ -18,7 +18,14 @@
 .habits__list {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   flex-wrap: wrap;
   width: 70vw;
   margin: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .habits__list {
+    width: 95vw;
+  }
 }

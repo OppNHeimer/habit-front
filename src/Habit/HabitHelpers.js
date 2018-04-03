@@ -21,11 +21,23 @@ export function returnBlocks (state, habit, scope) {
 }
 
 function determineSize (index) {
-  if (index === 0) {
-    return 6.27
-  } else if (index === 1) {
-    return 5.22
-  } else {
-    return 3.02
+  if (window.innerWidth > 1000) {
+    if (index === 0) {
+      return 6.27
+    } else if (index === 1) {
+      return 5.22
+    } else {
+      return 3.02
+    }
+  }
+  if (window.innerWidth <= 1000) {
+    if (index === 0) {
+      return 8.5
+    } else if (index === 1) {
+      return 6.52
+    } else {
+      return 4.02
+    }
   }
 }
+  

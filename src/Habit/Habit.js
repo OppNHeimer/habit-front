@@ -40,7 +40,13 @@ class Habit extends Component {
 
   render () {
     let width
-    this.state.index > 1 ? width = {width: '33vw'} : width = {width: '70vw'}
+    console.log(window.innerWidth)
+    if (window.innerWidth > 1000) {
+      this.state.index > 1 ? width = {width: '33vw'} : width = {width: '70vw'}
+    }
+    if (window.innerWidth <= 1000) {
+      this.state.index > 1 ? width = {width: '45vw'} : width = {width: '93vw'}
+    }
     if (!this.state.habit.complete) {
       return (
         <div className='habit' style={width}>
