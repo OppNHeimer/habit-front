@@ -8,6 +8,8 @@ Check out the deployed MVP at https://oppnheimer.github.io/habit100/ (it may tak
 
 or run locally:
 
+[install MongoDB](https://docs.mongodb.com/v3.0/installation/)
+
 download and start a local express/mongoose server
 ```bash
 $ git clone https://github.com/OppNHeimer/habit-back
